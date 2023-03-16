@@ -279,3 +279,21 @@
       margin-bottom: 4%;
     }
   }
+
+  body {
+    background-color: #4a4a4a;
+  }
+
+  h1, h2, h3 {
+    color: #4a4a4a;
+  }
+
+  button {
+    background-color: #ffcd38;
+    border-color: #ffcd38;
+  }
+
+  Badge {
+    background-color: #ffdd67;
+    color: #4a4a4a;
+  }
