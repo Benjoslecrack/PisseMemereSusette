@@ -10,7 +10,7 @@ import axios from 'axios';
 import Home from "./pages/home/Home";
 import Navbar from './components/Navbar/Navbar.jsx';
 import Recherche from './pages/Recherche/recherche.jsx'
-
+import Footer from './components/Footer/Footer.jsx'
 // App
 function App() {
   const [{ user }, dispatch] = useStateValue();

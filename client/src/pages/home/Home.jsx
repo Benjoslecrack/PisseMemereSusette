@@ -66,16 +66,16 @@ export default function Home() {
       <h1 className="text-3xl font-bold underline">Liste des toilettes les plus proches</h1>
 
         {toiletsAroundLoc.map((value)=>(
-              <><Card style={{ width: '100%',margin:10 }} >
+              <><Card style={{ width: '100%',margin:10, border:' 4px solid #ffcd38', background:'#f7f7f7' }} >
                       <Card.Body>
                         <Row style={{display:'flex', flexDirection:'row'}} className="d-flex flex-direction-row">
                           <Col style={{display:'flex', flexDirection:'column'}} md={3}>
-                          <img src="https://d1nhio0ox7pgb.cloudfront.net/_img/i_collection_png/512x512/plain/toilet.png"></img>
+                          <img style={{height:100,width:100}}src="https://d1nhio0ox7pgb.cloudfront.net/_img/i_collection_png/512x512/plain/toilet.png"></img>
                           </Col>
                           <Col style={{display:'flex', flexDirection:'column'}} sm={6}>
-                            <div className="text-3xl font-bold underline">type : {value.fields.type}</div>
-                            <div>arrondissement : {value.fields.arrondissement}</div>
-                            {value.fields.horaire ==="Voir fiche équipement" ? ( <a href={`${value.fields.url_fiche_equipement}`}>horaire : voir fiche horaire</a> ): (<div>horaire : {value.fields.horaire}</div>) }
+                            <div className="text-3xl font-bold underline">Type : {value.fields.type}</div>
+                            <div>Arrondissement : {value.fields.arrondissement}</div>
+                            {value.fields.horaire ==="Voir fiche équipement" ? ( <a href={`${value.fields.url_fiche_equipement}`}>Horaire : voir fiche horaire</a> ): (<div>Horaire : {value.fields.horaire}</div>) }
                            
 
                             

@@ -14,8 +14,9 @@ export default function Footer() {
         
         <div style={{padding:0}} className='footerContainer'>
                 <Row xs={1} lg={4} style={{margin:0,marginTop:18,padding:0}} className="">
-                   <div style={{height:70, background:"#ffcd38",width:'100vw',border:"8px solid #ffdd67",padding:0,display:'flex',flexDirection:'column',alignItems:'center',justifyContent:'center', fontWeight:'bold', color:'#4a4a4a',fontSize:'22px',}}>
-                    Anonymous
+                   <div style={{height:100, background:"#ffcd38",width:'100vw',border:"8px solid #ffdd67",padding:0,display:'flex',flexDirection:'column',alignItems:'center',justifyContent:'center', fontWeight:'bold', color:'#4a4a4a',fontSize:'22px',}}>
+                <div>Anonymous</div>                      <div style={{fontSize:14}}> Théo - Mattéo - Benjamin - Titouan - Nicu </div>
+
                    </div>
                 </Row>
         </div>
