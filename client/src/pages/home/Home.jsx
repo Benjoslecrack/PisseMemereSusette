@@ -13,6 +13,7 @@ import Carousel from "react-bootstrap/Carousel";
 import Card from 'react-bootstrap/Card';
 import Badge from "react-bootstrap/Badge";
 
+
 // Import style
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./Home.css";
@@ -56,7 +57,7 @@ export default function Home() {
     <>
     {/* geoloc */}
     <section className="d-flex justify-content-center">
-    <iframe style={{marginBottom:30}} src="https://opendata.paris.fr/explore/embed/dataset/sanisettesparis/map/?disjunctive.type&disjunctive.statut&disjunctive.arrondissement&disjunctive.horaire&disjunctive.acces_pmr&disjunctive.relais_bebe&basemap=jawg.dark&location=15,48.87884,2.32236&static=false&datasetcard=true&scrollWheelZoom=true" allow="geolocation" width="350" height="500" ></iframe>
+    <iframe style={{margin:30, }} src="https://opendata.paris.fr/explore/embed/dataset/sanisettesparis/map/?disjunctive.type&disjunctive.statut&disjunctive.arrondissement&disjunctive.horaire&disjunctive.acces_pmr&disjunctive.relais_bebe&basemap=jawg.dark&location=15,48.87884,2.32236&static=false&datasetcard=true&scrollWheelZoom=true" allow="geolocation" width="350" height="500" ></iframe>
     </section>
     {/* List of toilets */} 
     <section className="d-flex justify-content-center">
@@ -65,12 +66,11 @@ export default function Home() {
       <h1 className="text-3xl font-bold underline">Liste des toilettes les plus proches</h1>
 
         {toiletsAroundLoc.map((value)=>(
-              <>
-              <Card style={{ width: '100%' }}>
+              <><Card style={{ width: '100%',margin:10 }} >
                       <Card.Body>
                         <Row style={{display:'flex', flexDirection:'row'}} className="d-flex flex-direction-row">
-                          <Col style={{display:'flex', flexDirection:'column'}} sm={3}>
-                            image de toilette
+                          <Col style={{display:'flex', flexDirection:'column'}} md={3}>
+                          <img src="https://d1nhio0ox7pgb.cloudfront.net/_img/i_collection_png/512x512/plain/toilet.png"></img>
                           </Col>
                           <Col style={{display:'flex', flexDirection:'column'}} sm={6}>
                             <div className="text-3xl font-bold underline">type : {value.fields.type}</div>
@@ -86,7 +86,6 @@ export default function Home() {
                       </Card.Body>
 
                         </Card>
-
                   
                         </>
         ))}
