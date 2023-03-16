@@ -10,7 +10,7 @@ import axios from 'axios';
 import Home from "./pages/home/Home";
 import Navbar from './components/Navbar/Navbar.jsx';
 import Recherche from './pages/Recherche/recherche.jsx'
-
+import Footer from './components/Footer/Footer.jsx'
 // App
 function App() {
   const [{ user }, dispatch] = useStateValue();
@@ -37,8 +37,9 @@ function App() {
         <Route path='/recherche' element={<div style={{ height: "100vh" }}><Recherche /></div>} />
 
         /** Ne rien mettre en dessous de cette route */
-        <Route path="*" element={<h1> error 404</h1>} />
-      </Routes>
+          <Route path="*" element={<h1> error 404</h1>} />
+        </Routes>
+        <Footer/>
     </>
   );
 }

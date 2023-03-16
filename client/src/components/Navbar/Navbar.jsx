@@ -53,7 +53,7 @@ export default function NavBar() {
 
   return (
 
-    <Navbar className="navbar" expand="lg" variant="tabs" defaultActiveKey="/">
+    <Navbar style={{marginBottom:25}}className="navbar" expand="lg" variant="tabs" defaultActiveKey="/">
       <Container fluid >
         <Navbar.Toggle className="burgermenu" aria-controls="navbarScroll" />
         <Navbar.Collapse id="navbarScroll">
@@ -63,11 +63,11 @@ export default function NavBar() {
               style={{ maxHeight: '100px' }}
               navbarScroll
             >
-              <NavLink className={({ isActive }) => (isActive ? "active" : "navLink")} to="/">
-                <Nav.Link className="navbar-link" href="/">Accueil</Nav.Link>
+              <NavLink style={{fontWeight:600,fontSize:20}} className={({ isActive }) => (isActive ? "active" : "navLink")} to="/">
+                <Nav.Link className="navbar-link" style={{fontWeight:600,fontSize:20}}href="/">Accueil</Nav.Link>
               </NavLink>
-              <NavLink className={({ isActive }) => (isActive ? "active" : "navLink")} to="/tarificateurs" >
-                <Nav.Link className="navbar-link" href="/tarificateurs">Recherche</Nav.Link>
+              <NavLink style={{fontWeight:600,fontSize:20}} className={({ isActive }) => (isActive ? "active" : "navLink")} to="/recherche" >
+                <Nav.Link className="navbar-link" style={{fontWeight:600,fontSize:20}} href="/recherche">Recherche</Nav.Link>
               </NavLink>
             </Nav>
           </Container>
