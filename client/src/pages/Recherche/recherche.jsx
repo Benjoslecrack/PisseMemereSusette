@@ -18,6 +18,30 @@ import "./recherche.css";
 
 export default function Home() {
 
+    const types = ['Tous', 'TOILETTES', 'SANISETTE', 'LAVATORY', 'URINOIR'];
+
+    const handleChange = (event) => {
+        console.log(event.target.value)
+        setType(`&refine.type=${event.target.value}`)
+        if (event.target.value === 'Tous') {
+            setType('')
+        } else {
+            setType(`&refine.type=${event.target.value}`)
+        }
+        setSelectedOption(event.target.value)
+    };
+
+    const [isChecked, setIsChecked] = useState(false);
+
+    const handleCheckboxChange = (event) => {
+        setIsChecked(event.target.checked);
+        if (event.target.checked == false) {
+            setPMR('')
+        } else {
+            setPMR(`&refine.acces_pmr=Oui`)
+        }
+    };
+    const [selectedOption, setSelectedOption] = useState('Tous')
     const [bebe, setBebe] = useState()
     const [pmr, setPMR] = useState()
     const [arron, setArron] = useState()
@@ -33,8 +57,29 @@ export default function Home() {
     return (
         <>
             <div id="carte" className="carte">
-                <h1>cc</h1>
-                <iframe styles="" src={`${url}`} width="400" height="300" frameborder="0"></iframe>
+                <iframe styles="" src={`${url}`} width="400" height="500" frameborder="0"></iframe>
             </div>
+
+            <div className="type">
+                <select value={selectedOption} onChange={handleChange}>
+                    {types.map((option) => (
+                        <option key={option} value={option}>
+                            {option}
+                        </option>
+                    ))}
+                </select>
+            </div>
+
+            <div>
+                <label>
+                    <input
+                        type="checkbox"
+                        checked={isChecked}
+                        onChange={handleCheckboxChange}
+                    />
+                    PMR
+                </label>
+            </div>
+
         </>);
 }

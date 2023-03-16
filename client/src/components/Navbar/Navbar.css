@@ -1,5 +1,5 @@
 .navbar {
-    background-color: #FFFFFF;
+    background-color: #ffcd38;
 }
 
 .navbarcontaine {
@@ -32,8 +32,8 @@
 
 .burgermenu {
     background-color: rgb(255, 255, 255);
-width: 60px;
-height: 60px;
+    width: 60px;
+    height: 60px;
 }
 
 .iconConnexion {
@@ -54,12 +54,12 @@ height: 60px;
     justify-content: center;
 }
 
-.navbar-toggler-icon .close{
-background-image: url("https://cdn.icon-icons.com/icons2/1674/PNG/512/close_111152.png") ;
+.navbar-toggler-icon .close {
+    background-image: url("https://cdn.icon-icons.com/icons2/1674/PNG/512/close_111152.png");
 }
 
 
-.navbar-toggler-icon{
+.navbar-toggler-icon {
     background-image: url("https://static.thenounproject.com/png/3187934-200.png");
 }
 
@@ -67,7 +67,7 @@ background-image: url("https://cdn.icon-icons.com/icons2/1674/PNG/512/close_1111
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
     padding: 5px 20px 5px 20px;
     border-radius: 40px;
-  
+
     display: flex;
     align-items: center;
     justify-content: center;
@@ -84,12 +84,12 @@ background-image: url("https://cdn.icon-icons.com/icons2/1674/PNG/512/close_1111
     width: 150px;
     right: 0;
     left: auto;
-  }
+}
 
-  .dividerDrodDown{
+.dividerDrodDown {
     border-bottom: #000000 1px solid;
-    border-image: linear-gradient(to right, white, white, black,white,  white) 1;
-  }
+    border-image: linear-gradient(to right, white, white, black, white, white) 1;
+}
 
 @media (min-width: 992px) {
     .navbar-expand-lg .navbar-nav {
@@ -106,5 +106,5 @@ background-image: url("https://cdn.icon-icons.com/icons2/1674/PNG/512/close_1111
 .navbar-toggler:focus {
     text-decoration: none;
     outline: none;
-    box-shadow:none;
+    box-shadow: none;
 }
