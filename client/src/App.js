@@ -63,6 +63,7 @@ function App() {
         /** Ne rien mettre en dessous de cette route */
           <Route path="*" element={<h1> error 404</h1>} />
         </Routes>
+        <Footer/>
     </>
   );
 }
