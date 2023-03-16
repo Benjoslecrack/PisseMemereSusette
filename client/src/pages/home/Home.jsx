@@ -1,6 +1,8 @@
 import React, {useState, useEffect} from "react";
 import axios from 'axios';
 // Bootstrap Grid
+
+import {BiWalk} from 'react-icons/bi';
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
@@ -18,14 +20,21 @@ import "./Home.css";
 
 export default function Home() {
   
+  const [positionUser, setPositionUser] = useState({});
   const [toiletsAroundLoc, setToiletsAroundLoc] = useState([]);
+  const [distanceAroundToSearch, setDistanceAroundToSearch] = useState();
 
+  const valueToDecimal =(number) =>{
+    let numberToFixed = parseFloat(number).toFixed(2);
+    console.log();
+    return numberToFixed
+  }
   useEffect(() => {
-    axios.get(`https://opendata.paris.fr/api/records/1.0/search/?dataset=sanisettesparis&q=&facet=type&facet=statut&facet=arrondissement&facet=horaire&facet=acces_pmr&facet=relais_bebe`)
+    axios.get(`https://opendata.paris.fr/api/records/1.0/search/?dataset=sanisettesparis&q=&rows=10&facet=type&facet=statut&facet=arrondissement&facet=horaire&facet=acces_pmr&facet=relais_bebe&geofilter.distance=48.88%2C2.38%2C500`)
       .then((res) => {
         console.log(res.data);
         /* #TODO: limiter cette variable a ~10-15 */
-        setToiletsAroundLoc(res.data.records)
+        setToiletsAroundLoc(res.data.records);
       })
   }, []);
 
@@ -34,7 +43,7 @@ export default function Home() {
     <>
     {/* geoloc */}
     <section className="d-flex justify-content-center">
-    <iframe style={{marginBottom:30}} src="https://opendata.paris.fr/explore/embed/dataset/sanisettesparis/map/?disjunctive.type&disjunctive.statut&disjunctive.arrondissement&disjunctive.horaire&disjunctive.acces_pmr&disjunctive.relais_bebe&basemap=jawg.dark&location=15,48.87884,2.32236&static=false&datasetcard=true&scrollWheelZoom=true" allow="geolocation" width="350" height="490" frameborder="2"></iframe>
+    <iframe style={{marginBottom:30}} src="https://opendata.paris.fr/explore/embed/dataset/sanisettesparis/map/?disjunctive.type&disjunctive.statut&disjunctive.arrondissement&disjunctive.horaire&disjunctive.acces_pmr&disjunctive.relais_bebe&basemap=jawg.dark&location=15,48.87884,2.32236&static=false&datasetcard=true&scrollWheelZoom=true" allow="geolocation" width="350" height="auto" ></iframe>
     </section>
     {/* List of toilets */} 
     <section className="d-flex justify-content-center">
@@ -46,18 +55,17 @@ export default function Home() {
                       <Card.Body>
                         <Row style={{display:'flex', flexDirection:'row'}} className="d-flex flex-direction-row">
                           <Col style={{display:'flex', flexDirection:'column'}} md={3}>
-                            cc
+                            image de toilette
                           </Col>
                           <Col style={{display:'flex', flexDirection:'column'}} md={6}>
                             <div>type : {value.fields.type}</div>
                             <div>arrondissement : {value.fields.arrondissement}</div>
-                            <div>horaire : {value.fields.horaire}</div>
+                            <div>horaire : {value.fields.horaire ==="Voir fiche équipement" ? "lien frérot" : value.fields.horaire }</div>
 
                             
                           </Col>
                           <Col style={{display:'flex', flexDirection:'column'}} md={3}>
-                            
-bebe pmr  {value.fields.arrrondissement}                         </Col>
+                             {valueToDecimal(value.fields.dist)} metres ...<BiWalk size={18}/>                   </Col>
                         </Row>
                       </Card.Body>
 
@@ -71,4 +79,5 @@ bebe pmr  {value.fields.arrrondissement}                         </Col>
       </Row>
       </section> </>
   );
+
 }
