@@ -37,7 +37,7 @@ function App() {
 
   return (
     <>
-        <Navbar />
+        {/* <Navbar /> */}
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/connexion" element={<Login />} />
@@ -63,7 +63,7 @@ function App() {
         /** Ne rien mettre en dessous de cette route */
           <Route path="*" element={<h1> error 404</h1>} />
         </Routes>
-      <Footer/>
+      {/* <Footer/> */}
     </>
   );
 }
