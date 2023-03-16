@@ -1,0 +1,281 @@
+* {
+    --color-main: white;
+    --color-primary: #1789fc;
+    --color-secondary: #296eb4;
+    --color-contrast: #fdb833;
+  }
+  
+  #web-services {
+    padding: 10% 0;
+    background-image: url("../../assets/pexels.png");
+    background-position: 25% 25%;
+    color: var(--color-main);
+  }
+
+
+  
+  .texts {
+    width: 80%;
+  }
+  
+  .row {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row;
+  }
+  
+  a {
+    text-decoration: none;
+  }
+  
+  h2 {
+    font-size: 2.3rem;
+    font-weight: bold;
+  }
+  
+  span {
+    color: var(--color-contrast);
+    font-size: 1.4rem;
+    font-weight: bold;
+  }
+  
+  p {
+    font-size: 1.3rem;
+  }
+  
+  .cards {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  
+  .web-services-card {
+    background: white;
+    border-radius: 20px;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    color: black!important;
+    text-align: center;
+    align-items: center;
+    height: 140px;
+    width: 150px;
+    padding-top: 10px;
+    transition: 0.2s all ease-in-out;
+  }
+  
+  .web-services-card:hover {
+    transform: scale(1.05);
+    transition: 0.2s all ease-in-out;
+  }
+  
+  .cta {
+    color: var(--color-main);
+    background: var(--color-primary);
+    padding: 20px;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 120px;
+  }
+  
+  .text-align-end {
+    text-align: end;
+  }
+  
+  #lehub {
+    padding-top: 6%;
+  }
+  
+  #actu {
+    padding-top: 6%;
+  }
+  
+  #actu-carousel {
+    margin: 1% 0;
+  }
+  
+  .carousel-indicators {
+    position: relative;
+    top: 0;
+  }
+  
+  .carousel-control-prev {
+    display: none;
+  }
+  
+  .carousel-control-next {
+    display: none;
+  }
+  .actu-card:hover {
+    transition: 0.3s all ease-in-out;
+    transform: scale(1.1);
+    background: #296fb41a;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    width: 300px;
+    font-size: 0.9rem;
+    border-radius: 25px;
+    overflow: hidden;
+  }
+  
+  h5 {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: var(--color-secondary);
+    margin: 10px;
+  }
+  
+  .card-p {
+    font-size: 1rem;
+  }
+  
+  .img-card {
+    border-radius: 20px;
+    width: 100%;
+  }
+  
+  .lehublogo {
+    width:400px;
+  }
+  
+  .card {
+      border: none;
+      box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;          
+  }
+  
+  .testimonial-card .card-up {
+    height: 120px;
+    overflow: hidden;
+    border-top-left-radius: 0.25rem;
+    border-top-right-radius: 0.25rem;
+  }
+  
+  .testimonial-card .avatar {
+    width: 110px;
+    margin-top: -60px;
+    overflow: hidden;
+    border: 3px solid #fff;
+    border-radius: 50%;
+  }
+  
+  #testimonials {
+    padding-top: 6%;
+    background-color: #296eb4;
+    background-image: url("../../assets/home/wave.svg");
+    background-repeat: no-repeat;
+    padding-bottom: 6%;
+  }
+  
+  .badge {
+    background-color: var(--color-contrast)!important;
+  }
+  
+  .btn {
+    border-radius: 20px;
+    background: var(--color-primary);
+  }
+  
+  .btn:hover {
+    background: var(--color-secondary);
+  }
+  
+  /* Animation */
+  
+  .heart {
+    height: 65px;
+    width: 65px;
+    background-image: url('../../assets/home/heart/battement-de-coeur.png');
+    background-size: cover;
+    transition: 0.2s all ease-in-out;
+  }
+  
+  .web-services-card:hover .heart {
+    background-image: url('../../assets/home/heart/battement-de-coeur.gif');
+    transition: 0.2s all ease-in-out;
+  }
+  
+  .web-services-card:hover p {
+    color: black!important;
+  }
+  
+  .umbrella {
+    height: 65px;
+    width: 65px;
+    background-image: url('../../assets/home/umbrella/parapluie.png');
+    background-size: cover;
+    transition: 0.2s all ease-in-out;
+  }
+  
+  .web-services-card:hover .umbrella {
+    background-image: url('../../assets/home/umbrella/parapluie.gif');
+    transition: 0.2s all ease-in-out;
+  }
+  
+  .car {
+    height: 65px;
+    width: 65px;
+    background-image: url('../../assets/home/car/auto.png');
+    background-size: cover;
+    transition: 0.2s all ease-in-out;
+  }
+  
+  .web-services-card:hover .car {
+    background-image: url('../../assets/home/car/auto.gif');
+    transition: 0.2s all ease-in-out;
+  }
+  
+  .money {
+    height: 65px;
+    width: 65px;
+    background-image: url('../../assets/home/money/remise-en-argent.png');
+    background-size: cover;
+    transition: 0.2s all ease-in-out;
+  }
+  
+  .web-services-card:hover .money {
+    background-image: url('../../assets/home/money/remise-en-argent.gif');
+    transition: 0.2s all ease-in-out;
+  }
+  
+  .man {
+    height: 65px;
+    width: 65px;
+    background-image: url('../../assets/home/man/homme.png');
+    background-size: cover;
+    transition: 0.2s all ease-in-out;
+  }
+  
+  .web-services-card:hover .man {
+    background-image: url('../../assets/home/man/homme.gif');
+    transition: 0.2s all ease-in-out;
+  }
+  
+  .arrow {
+    height: 65px;
+    width: 65px;
+    background-image: url('../../assets/home/arrow/fleche-droite.png');
+    background-size: cover;
+    transition: 0.2s all ease-in-out;
+  }
+  
+  .web-services-card:hover .arrow {
+    background-image: url('../../assets/home/arrow/fleche-droite.gif');
+    transition: 0.2s all ease-in-out;
+  }
+  
+  /* Responsive */
+  
+  @media screen and (max-width: 800px) {
+    .lehublogo {
+      width: 200px;
+      padding: 20% 0;
+    }
+    .actu-cards {
+      display: block !important;
+    }
+    .card {
+      margin-bottom: 4%;
+    }
+  }

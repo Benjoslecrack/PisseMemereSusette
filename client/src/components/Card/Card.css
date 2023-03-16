@@ -1,0 +1,30 @@
+.card-img-top{
+   height: 50%;
+   border-radius: 25px 25px 0px 0px;
+   object-fit: cover;
+}
+
+.bg-primary{
+    background-color:  rgb(118, 69, 255) !important;
+}
+
+.textinCard{
+    white-space: pre-wrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    line-clamp: 3;
+    -webkit-box-orient: vertical;
+}
+
+.cardBody{
+    background-color: aquamarine;
+    border-radius: 0px 0px 25px 25px;
+    height: 50%;
+}
+
+.card{
+    border-radius: 25px;
+    height: 50vh;
+}

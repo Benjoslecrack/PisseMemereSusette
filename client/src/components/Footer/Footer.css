@@ -1,0 +1,36 @@
+.footerContainer{
+    background-color: rgb(255, 255, 255);
+}
+
+.cardAllFooter{
+    background-color: rgb(255, 255, 255);
+    border:none;
+    text-align: center;
+}
+
+
+li{
+    list-style-type: none;
+    font-weight: 300;
+}
+ul{
+    margin:0;
+    padding: 0;
+}
+
+.titlecard{
+    font-weight: 800;
+    color: black;
+    padding: 2px;
+    border-bottom: solid 1px black;
+  border-image: linear-gradient(to right, white, black, white) 1;
+}
+
+.linkInFooter{
+    text-decoration: none;
+    color: #296EB4;
+}
+
+.cardAllFooter{
+    box-shadow: none;
+}

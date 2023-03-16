@@ -1,0 +1,13 @@
+.inputProfile {
+    border: none;
+    background-color: rgb(230, 230, 230);
+    border-radius: 10px;
+    height: 35px;
+    text-indent: 5px;
+    padding:20px auto;
+    margin: 5px;
+}
+
+.inputProfileFile{
+   margin: 5px;
+}
